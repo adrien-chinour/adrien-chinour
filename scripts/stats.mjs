@@ -67,15 +67,12 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 const font = `font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"`;
 
 function statsSvg(t) {
-  const w = 300, rowH = 26, h = 16 + stats.length * rowH;
-  const rows = stats
-    .map(([label, value], i) => {
-      const y = 28 + i * rowH;
-      return `<text x="0" y="${y}" ${font} font-size="14" fill="${t.muted}">${esc(label)}</text>
-<text x="${w}" y="${y}" ${font} font-size="14" font-weight="600" fill="${t.fg}" text-anchor="end">${esc(value.toLocaleString("fr-FR"))}</text>`;
-    })
-    .join("\n");
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">\n${rows}\n</svg>\n`;
+  const [, value] = stats[0];
+  const n = value.toLocaleString("fr-FR");
+  const w = 320, h = 44;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+<text x="0" y="32" ${font} font-size="30" font-weight="700" fill="${t.fg}">${esc(n)}<tspan dx="8" font-size="15" font-weight="400" fill="${t.muted}">commits sur 12 mois</tspan></text>
+</svg>\n`;
 }
 
 function langsSvg(t) {
