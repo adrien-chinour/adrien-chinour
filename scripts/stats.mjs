@@ -15,14 +15,9 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
     contributionsCollection(from: $from, to: $to) {
       totalCommitContributions
       restrictedContributionsCount
-      totalPullRequestContributions
-      totalIssueContributions
-      totalPullRequestReviewContributions
     }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: {field: PUSHED_AT, direction: DESC}) {
-      totalCount
       nodes {
-        stargazerCount
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name color } }
         }
@@ -47,12 +42,7 @@ const u = json.data.user;
 const c = u.contributionsCollection;
 
 const stats = [
-  ["Commits (12 mois)", c.totalCommitContributions + c.restrictedContributionsCount],
-  ["Pull requests", c.totalPullRequestContributions],
-  ["Issues", c.totalIssueContributions],
-  ["Reviews", c.totalPullRequestReviewContributions],
-  ["Dépôts", u.repositories.totalCount],
-  ["Stars reçues", u.repositories.nodes.reduce((n, r) => n + r.stargazerCount, 0)],
+  ["Commits sur 12 mois", c.totalCommitContributions + c.restrictedContributionsCount],
 ];
 
 const bytes = new Map();
