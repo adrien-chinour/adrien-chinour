@@ -2,6 +2,11 @@
 
 Backend developer · Bordeaux, France
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="stats-dark.svg">
+  <img alt="Commits sur 12 mois" src="stats-light.svg">
+</picture>
+
 ![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)
 ![Symfony](https://img.shields.io/badge/Symfony-000000?logo=symfony&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
@@ -12,10 +17,6 @@ Backend developer · Bordeaux, France
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?logo=anthropic&logoColor=white)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="stats-dark.svg">
-  <img alt="Stats GitHub" src="stats-light.svg">
-</picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="langs-dark.svg">
   <img alt="Langages" src="langs-light.svg">
