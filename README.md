@@ -12,7 +12,13 @@ Backend developer · Bordeaux, France
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?logo=anthropic&logoColor=white)
 
-![Stats](https://github-readme-stats.vercel.app/api?username=adrien-chinour&show_icons=true&hide_title=true&hide_rank=true&theme=default&hide_border=true)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=adrien-chinour&layout=compact&hide_title=true&hide_border=true)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="stats-dark.svg">
+  <img alt="Stats GitHub" src="stats-light.svg">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="langs-dark.svg">
+  <img alt="Langages" src="langs-light.svg">
+</picture>
 
 [chinour.fr](https://chinour.fr)
